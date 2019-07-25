@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Ejercicio 1</title>
+    </head>
+    <body>
+        <script>
+            var numeroUsuario;
+
+            for (let i = 0; i < 10; i++) {
+                numeroUsuario = parseFloat(prompt(''));
+                if (numeroUsuario == 0) {
+                    alert('El número ingresado equivale a 0');
+                } else if (numeroUsuario % 2 == 0) {
+                    alert('El número ingresado es par');
+                } else {
+                    alert('El número ingresado es impar');
+                }
+            }
+        </script>
+    </body>
+</html>
