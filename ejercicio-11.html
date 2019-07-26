@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Ejercicio 11</title>
+    </head>
+    <body>
+        <script>
+            // las variables por defecto son undefined
+            var numeroIngresado, numeroMenor, numeroMayor, r;
+            var multiplosDe4y7 = 0;
+            var sumaImpares = 0;
+            var contador = 0;
+
+            do {
+                do {
+                    numeroIngresado = parseFloat(prompt('Ingrese un número: '));
+                    if (isNaN(numeroIngresado)) {
+                        alert('El valor ingresado no es un número');
+                    }
+                } while (isNaN(numeroIngresado));
+
+                if (numeroIngresado % 4 == 0 && numeroIngresado % 7 == 0) {
+                    multiplosDe4y7++;
+                }
+
+                // else if es como un switch
+                if (numeroIngresado % 2 != 0) {
+                    sumaImpares += numeroIngresado;
+                }
+
+                if (contador == 0) {
+                    numeroMayor = numeroIngresado;
+                    numeroMenor = numeroIngresado;
+                } else {
+                    if (numeroMayor > numeroIngresado) {
+                        numeroMayor = numeroIngresado;
+                    }
+
+                    if (numeroMenor < numeroIngresado) {
+                        numeroMenor = numeroIngresado;
+                    }
+                }
+
+                contador++;
+                r = confirm('¿Desea agregar algún otro número?');
+            } while (r);
+        </script>
+    </body>
+</html>
